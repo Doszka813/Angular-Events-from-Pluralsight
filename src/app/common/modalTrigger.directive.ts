@@ -1,6 +1,5 @@
 import { Directive, OnInit, Inject, ElementRef, Input } from '@angular/core';
 import { JQ_TOKEN } from '../shared/index';
-import { element } from 'protractor';
 
 @Directive({
     // tslint:disable-next-line:directive-selector
