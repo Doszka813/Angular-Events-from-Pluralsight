@@ -1,0 +1,11 @@
+.navbar-nav.mr-auto > li {
+    margin: 0 15px;
+}
+
+.navbar-header.navbar-right > ul > li {
+    margin: 0 50px;
+}
+
+form-inline my-2.my-lg-0 {
+    margin: 0 50px;
+}

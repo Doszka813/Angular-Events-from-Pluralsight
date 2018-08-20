@@ -1,0 +1,12 @@
+h1 {
+    margin: 10px 30px;
+    padding: 20px;
+    
+}
+
+
+.row > div {
+    margin: 50px;
+    padding: 0;
+}
+

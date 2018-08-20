@@ -1,0 +1,16 @@
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.event-image {
+    height: 100px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.col-md-7 > button {
+    margin: 0 5px;
+}
