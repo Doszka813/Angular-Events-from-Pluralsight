@@ -19,15 +19,15 @@ import {
   EventsListResolverService,
   SessionListComponent,
   CreateSessionComponent,
-  DurationPipe
+  DurationPipe,
+  UpvoteComponent,
 } from './events';
-
+import { VoterService } from './shared/index';
 import { EventsComponent } from './events/events.component';
 import { AuthService } from './user/auth.service';
 import { CollapsibleWellComponent } from './common/collapsible-well/collapsible-well.component';
 import { SimpleModalComponent } from './common/simpleModal.component';
 import { ModalTriggerDirective } from './common/modalTrigger.directive';
-
 
 const toastr: Toastr = window['toastr'];
 const jQuery = window['$'];
@@ -48,7 +48,8 @@ const jQuery = window['$'];
     CollapsibleWellComponent,
     DurationPipe,
     SimpleModalComponent,
-    ModalTriggerDirective
+    ModalTriggerDirective,
+    UpvoteComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +68,7 @@ const jQuery = window['$'];
     EventRouteActivatorService,
     EventsListResolverService,
     AuthService,
+    VoterService,
     { provide: 'CanDeactivateCreateEvent',
       useValue: chceckDirtyState
     }
