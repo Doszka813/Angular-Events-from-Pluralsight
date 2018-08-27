@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "server": "node node_modules/ngf-server/server.js", 
     "e2e": "ng e2e"
   },
   "private": true,
@@ -26,11 +27,13 @@
     "glyphicons": "^0.2.0",
     "jquery": "^3.3.1",
     "ng6-toastr-notifications": "^1.0.4",
+    "ngf-server": "^1.0.2",
     "ngx-bootstrap": "^3.0.1",
     "ngx-toastr": "^9.0.2",
     "octicons": "^8.0.0",
     "popper.js": "^1.14.4",
     "rxjs": "6.0.0",
+    "sass": "^1.13.0",
     "toastr": "^2.1.4",
     "zone.js": "0.8.26"
   },

@@ -15,21 +15,22 @@ import {
   EventCardComponent,
   EventDetailComponent,
   CreateEventComponent,
-  EventRouteActivatorService,
   EventsListResolverService,
   SessionListComponent,
   CreateSessionComponent,
   DurationPipe,
   UpvoteComponent,
   LocationValidator,
+  EventsResolverService,
 } from './events';
+
 import { VoterService } from './shared/index';
 import { EventsComponent } from './events/events.component';
 import { AuthService } from './user/auth.service';
 import { CollapsibleWellComponent } from './common/collapsible-well/collapsible-well.component';
 import { SimpleModalComponent } from './common/simpleModal.component';
 import { ModalTriggerDirective } from './common/modalTrigger.directive';
-
+import { HttpClientModule } from '@angular/common/http';
 const toastr: Toastr = window['toastr'];
 const jQuery = window['$'];
 
@@ -54,6 +55,7 @@ const jQuery = window['$'];
     UpvoteComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
@@ -67,7 +69,7 @@ const jQuery = window['$'];
       provide: JQ_TOKEN, useValue: jQuery
     },
     EventService,
-    EventRouteActivatorService,
+    EventsResolverService,
     EventsListResolverService,
     AuthService,
     VoterService,
