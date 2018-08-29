@@ -2,7 +2,6 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
-import {TOASTR_TOKEN, Toastr } from '../../shared/toastr.service';
 
 @Component({
   selector: 'app-profile',
@@ -16,7 +15,7 @@ export class ProfileComponent implements OnInit {
   private lastName: FormControl;
 
   // tslint:disable-next-line:max-line-length
-  constructor(private authService: AuthService, private router: Router, @Inject(TOASTR_TOKEN) private toastr: Toastr) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
      this.firstName = new FormControl(this.authService.currentUser.firstName, [Validators.required, Validators.pattern('[a-zA-Z].*')]);
@@ -31,7 +30,6 @@ export class ProfileComponent implements OnInit {
     if (this.profileForm.valid) {
       this.authService.updateCurrentUser(formValues.firstName, formValues.lastName)
         .subscribe(() => {
-          this.toastr.success('Profile saved', 'Succes');
       });
     }
   }

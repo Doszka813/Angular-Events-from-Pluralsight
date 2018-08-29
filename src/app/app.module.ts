@@ -6,7 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { EventService } from './shared/event.service';
-import { TOASTR_TOKEN, Toastr } from './shared/index';
 import { appRoutes } from './nav/routes';
 import { Error404Component } from './errors/404.component';
 import { JQ_TOKEN } from './shared/jQuery.service';
@@ -31,7 +30,6 @@ import { CollapsibleWellComponent } from './common/collapsible-well/collapsible-
 import { SimpleModalComponent } from './common/simpleModal.component';
 import { ModalTriggerDirective } from './common/modalTrigger.directive';
 import { HttpClientModule } from '@angular/common/http';
-const toastr: Toastr = window['toastr'];
 const jQuery = window['$'];
 
 
@@ -62,9 +60,6 @@ const jQuery = window['$'];
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    {
-      provide: TOASTR_TOKEN, useValue: toastr
-    },
     {
       provide: JQ_TOKEN, useValue: jQuery
     },
