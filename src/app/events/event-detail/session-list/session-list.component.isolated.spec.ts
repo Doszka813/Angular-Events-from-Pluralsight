@@ -5,6 +5,7 @@ import { ISession } from '../../../shared/event.model';
 
 describe('SessionListComponent', () => {
   let component: SessionListComponent;
+  // tslint:disable-next-line:prefer-const
   let  mockAuthService, mockVoterService;
 
   beforeEach(() => {
@@ -38,7 +39,7 @@ describe('SessionListComponent', () => {
 
       component.ngOnChanges();
 
-      expect(component.visibleSessions[0].name).toBe('s1');
+      expect(component.visibleSessions[2].name).toBe('s3');
     });
   });
 
